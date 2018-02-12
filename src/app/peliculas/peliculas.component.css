@@ -31,16 +31,16 @@
     margin: 2% auto;
 }
 
-mat-card-content{
-    overflow-y: auto;
-    height: 175px;
-}
-
 
 mat-horizontal-stepper{
     width:80%;
     margin: 2% auto;
     box-shadow: 0.2px 0.2px 1.3px rgba(0,0,0,0.4);
+}
+
+mat-card-content{
+    overflow-y: auto;
+    height:175px;
 }
 
 img.mat-card-image{

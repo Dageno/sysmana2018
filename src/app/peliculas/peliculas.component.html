@@ -1,4 +1,4 @@
-<!--<mat-horizontal-stepper [linear]="isLinear" id="stepper" class="invisible">
+<mat-horizontal-stepper [linear]="isLinear" id="stepper" class="invisible">
   <mat-step [stepControl]="nameForm">
     <form [formGroup]="nameForm">
       <ng-template matStepLabel>Añade el nombre de la película</ng-template>
@@ -20,7 +20,7 @@
         <button mat-button matStepperPrevious>Atrás</button>
         <button mat-button matStepperNext>Siguiente</button>
       </div>
-    </form>//import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+    </form>
   </mat-step>
   <mat-step [stepControl]="claseForm">
     <form [formGroup]="claseForm">
@@ -85,13 +85,14 @@
       <button (click)="add()" mat-button matStepperPrevious>Finalizar</button>
     </div>
   </mat-step>
-</mat-horizontal-stepper>-->
+</mat-horizontal-stepper>
+
+
 <mat-form-field>
    <input  matInput class="buscar" [(ngModel)]="searchText" placeholder="Buscar">
 </mat-form-field>
 <div class="container">
-  <!--| filter : searchText"-->
-<div *ngFor="let pelicula of peliculas" class="tarjetas">  
+<div *ngFor="let pelicula of peliculas | filter : searchText" class="tarjetas">  
     <mat-card class="example-card">
         <mat-card-header>
           <div mat-card-avatar>
@@ -107,8 +108,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <!-- (click)="remove(pelicula)"-->
-          <button  id="{{pelicula.id}}" mat-button class="colorB">Eliminar</button>
+          <button (click)="remove(pelicula)" id="{{pelicula.id}}" mat-button class="colorB">Eliminar</button>
         </mat-card-actions>
       </mat-card>
 </div>

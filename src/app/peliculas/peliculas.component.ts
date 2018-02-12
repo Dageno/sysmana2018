@@ -47,6 +47,7 @@ export class PeliculasComponent implements OnInit {
 
   add(){
     BIBLIOTECA.push({id: BIBLIOTECA.length, name: this.nameForm.value.firstCtrl, avatar: this.avatarForm.value.secondCtrl, tematica: this.claseForm.value.thirdCtrl, alt: this.altForm.value.altCtrl, imagen: this.imagenForm.value.fourthCtrl, descripcion: this.descriptionForm.value.fifthCtrl});
+
   }
 
   remove(key){
